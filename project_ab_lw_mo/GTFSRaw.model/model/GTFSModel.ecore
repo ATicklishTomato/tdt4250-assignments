@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="GTFS" nsURI="platform://plugin/no.ntnu.tdt4350.TransportWizard/model/GTFS.ecore"
+    nsPrefix="GTFS">
+  <eClassifiers xsi:type="ecore:EClass" name="Collection">
+    <eOperations name="importRaw">
+      <eParameters name="RawCollectionInputObject" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="ignoreIrregularCalenderElements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="agency" upperBound="-1"
+        eType="#//Agency" eKeys="#//Agency/Name #//Agency/URL #//Agency/Timezone"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="routes" upperBound="-1"
+        eType="#//Route" eKeys="#//Route/RouteID"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trips" upperBound="-1"
+        eType="#//Trip" eKeys="#//Trip/TripID"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stopTimes" upperBound="-1"
+        eType="#//StopTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stops" upperBound="-1"
+        eType="#//Stop" eKeys="#//Stop/StopID"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calender" upperBound="-1"
+        eType="#//Calender" eKeys="#//Calender/ServiceID"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Agency">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="URL" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Timezone" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Route">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RouteID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ShortName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LongName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RouteType" lowerBound="1"
+        eType="#//GTFSRouteType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TripsC" upperBound="-1"
+        eType="#//Trip"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trip">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TripID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ServiceIDNotCalender" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Route" lowerBound="1" eType="#//Route"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Service" eType="#//Calender"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="StopTimesC" upperBound="-1"
+        eType="#//StopTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StopTime">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrivalTime" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="depatureTime" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopSequence" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Stop" lowerBound="1" eType="#//Stop"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Trip" lowerBound="1" eType="#//Trip"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stop">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StopID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Longitude" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Latitude" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="StopTimesC" upperBound="-1"
+        eType="#//StopTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Calender">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ServiceID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StartDate" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StopDate" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Monday" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Tuesday" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Wednesday" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Thursday" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Friday" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Saturday" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Sunday" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GTFSRouteType">
+    <eLiterals name="Tram"/>
+    <eLiterals name="Subway" value="1"/>
+    <eLiterals name="Rail" value="2"/>
+    <eLiterals name="Bus" value="3"/>
+    <eLiterals name="Ferry" value="4"/>
+    <eLiterals name="CableTram" value="5"/>
+    <eLiterals name="AerialLift" value="6"/>
+    <eLiterals name="Funicular" value="7"/>
+    <eLiterals name="Trolleybus" value="11"/>
+    <eLiterals name="Monorail" value="12"/>
+  </eClassifiers>
+</ecore:EPackage>

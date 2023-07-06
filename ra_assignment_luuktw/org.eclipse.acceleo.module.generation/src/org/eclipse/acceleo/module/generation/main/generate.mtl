@@ -1,0 +1,204 @@
+[comment encoding = UTF-8 /]
+[module generate('platform:/plugin/tdt4250.ra/model/educationalProgramModelFix.ra')]
+
+
+[template public generateElement(aProgram : Program)]
+[comment @main/]
+[file (aProgram.code + '.html', false, 'UTF-8')]
+[for (c: Course | aProgram.courses)]
+	[generateCourse(c)/]
+[/for]
+[for (s: Person | aProgram.staff)]
+	[generatePerson(s)/]
+[/for]
+<html lang="en">
+<head>
+<title>[aProgram.code/]</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1>Structure of [aProgram.name->at(1)/].</h1>
+
+<h3>Program is also known by the following names:</h3>
+<ul>
+[for (n: String | aProgram.name -> excluding(aProgram.name->at(1)))]
+	<li>[n/]</li>
+[/for]
+</ul>
+
+<h3>The program:</h3>
+<ul>
+[for (y: Year | aProgram.years)]
+	<li>[generateYear(y)/]</li>
+[/for]
+</ul>
+
+<h2>Staff in this program:</h2>
+<ul>
+[for (p : Person | aProgram.staff)]
+	<li><a href="./[p.firstName->at(1)/][p.lastName -> at(1)/].html">[generateHumanReadableName(p)/]</a></li>
+[/for]
+</ul>
+</body>
+</html>
+[/file]
+[/template]
+
+[template public generateYear(y: Year)]
+Year [y.number/]
+<ul>
+[for (s: Semester | y.semesters)]
+	<li>[generateSemester(s)/]</li>
+[/for]
+[for (vs: VariantSemester | y.variantSemesters)]
+	<li>[generateVariantSemester(vs)/]</li>
+[/for]
+</ul>
+[/template]
+
+[template public generateSemester(s: Semester)]
+Semester [s.name/]
+<ul>
+[for (c: Course | s.courses)]
+	<li><a href="./[c.code/].html">[c.code/] - [c.name -> at(1)/]</a></li>
+[/for]
+[for (vc: VariantCourse | s.variantCourses)]
+	<li>[generateVariantCourse(vc)/]</li>
+[/for]
+</ul>
+[/template]
+
+[template public generateVariantSemester(vs: VariantSemester)]
+Variant Semester [vs.name/]
+<ul>
+[for (s: Semester | vs.semesterChoices)]
+	<li>[generateSemester(s)/]</li>
+[/for]
+</ul>
+[/template]
+
+[template public generateVariantCourse(vc: VariantCourse)]
+Variant Courses Slot
+<ul>
+[for (c: Course | vc.courseChoices)]
+	<li><a href="./[c.code/].html">[c.code/] - [c.name -> at(1)/]</a></li>
+[/for]
+</ul>
+[/template]
+
+[template public generateCourse(c: Course)]
+[file (c.code + '.html', false, 'UTF-8')]
+<html lang="en">
+<head>
+<title>[c.code/]</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h1>[c.code/] - [c.name -> at(1)/]</h1>
+[if (not (c.name -> excluding(c.name->at(1))->isEmpty()))]
+<h3>Course is also known by the following names:</h3>
+<ul>
+[for (n: String | c.name -> excluding(c.name->at(1)))]
+	<li>[n/]</li>
+[/for]
+</ul>
+[/if]
+
+
+<h2>Course Assessment</h2>
+<table>
+	<tr>
+    	<th>Name</th>
+    	<th>Date</th>
+    	<th>Weight</th>
+		<th>Duration</th>
+    	<th>Type</th>
+	</tr>
+	[for (a: Assessment | c.assessments)]
+		[generateAssessment(a)/]
+	[/for]
+</table>
+
+<h2>This course is taught by the following professors and lecturers:</h2>
+<ul>
+[for (p : Person | c.staff)]
+	<li><a href="./[p.firstName->at(1)/][p.lastName -> at(1)/].html">[p.firstName/], [p.lastName/]</a></li>
+[/for]
+</ul>
+
+</body>
+</html>
+[/file]
+[/template]
+
+[template public generateAssessment(a: Assessment)]
+  <tr>
+    <td>[a.name/]</td>
+    <td>[a.date/]</td>
+    <td>[a.weight/]</td>
+    <td>[a.duration/] hours</td>
+    <td>[a.type/]</td>
+  </tr>
+[/template]
+
+[template public generatePerson(p: Person)]
+[file (p.firstName->at(1) + p.lastName->at(1) + '.html', false, 'UTF-8')]
+<html lang="en">
+<head>
+<title>[p.firstName -> at(1)/] [p.lastName -> at(1)/]</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1>[generateHumanReadableName(p)/]</h1>
+<h2>Email: </h2>[p.email/]
+
+<h2>This staff member teaches the following courses:</h2>
+<ul>
+[for (c: Course | p.assignedCourses)]
+	<li><a href="./[c.code/].html">[c.code/] - [c.name -> at(1)/]</li>
+[/for]
+</ul>
+
+</body>
+</html>
+[/file]
+[/template]
+
+[template public generateHumanReadableName(p: Person)]
+[for (fn: String | p.firstName)]
+[fn/] 
+[/for]
+[for (ln: String | p.lastName)]
+[ln/] 
+[/for]
+[/template]
+

@@ -1,0 +1,103 @@
+[comment encoding = UTF-8 /]
+[module generate('platform://plugin/no.ntnu.tdt4350.TransportWizard/model/GTFS.ecore')]
+
+
+[template public generateElement(collection : Collection, fileName : String)]
+[comment @main/]
+[file (fileName, false, 'UTF-8')]
+Collection:
+	Agencies {
+	[for (a: Agency | collection.agency)]
+		[generateAgency(a)/]
+	[/for]
+	}
+	
+	Routes {
+	[for (r: Route | collection.routes)]
+		[generateRoute(r)/]
+	[/for]
+	}
+
+	Trips {
+	[for (t: Trip | collection.trips)]
+		[generateTrip(t)/]
+	[/for]
+	}
+
+	Stops {
+	[for (s: Stop | collection.stops)]
+		[generateStop(s)/]
+	[/for]
+	}
+
+	Calendars {
+	[for (c: Calender | collection.calender)]
+		[generateCalendar(c)/]
+	[/for]
+	}
+[/file]
+[/template]
+
+[template private generateAgency(a: Agency)]
+Agency [a.Name/]:
+	URL= [a.URL/]
+	Time Zone= [a.Timezone/]
+[/template]
+
+[template private generateRoute(r: Route)]
+Route [r.RouteID/]:
+	Short Name= [r.ShortName/]
+	Long Name= [r.LongName/]
+	Route Type= [r.RouteType/]
+	Trips (by ID)= [for (t: Trip | r.TripsC)][t.TripID/], [/for]
+[/template]
+
+[template private generateTrip(t: Trip)]
+Trip [t.TripID/]:
+	Service ID= [t.ServiceIDNotCalender/]
+	Route ID= [t.Route.RouteID/]
+	Service ID= [t.Service.ServiceID/]
+	Stop Times= {
+		[for (st: StopTime | t.StopTimesC)]
+		[generateStopTime(st)/]
+		[/for]
+	}
+[/template]
+
+[template private generateStopTime(st: StopTime)]
+Stop Time:
+	Arrival Time= [st.arrivalTime/]
+	Departure Time= [st.depatureTime/]
+	Stop Sequence= [st.stopSequence/]
+	Stop ID= [st.Stop.StopID/]
+	Trip ID= [st.Trip.TripID/]
+[/template]
+
+[template private generateStop(s: Stop)]
+Stop [s.StopID/]:
+	Name= [s.Name/]
+	Longitude= [s.Longitude/]
+	Latitude= [s.Latitude/]
+	Stop Times= {
+	[for (st: StopTime | s.StopTimesC)]
+		[generateStopTime(st)/]
+	[/for]
+	}
+[/template]
+
+[template private generateCalendar(c: Calender)]
+Calendar [c.ServiceID/]:
+	Start Date= [c.StartDate/]
+	Stop Date= [c.StopDate/]
+	Monday= [c.Monday/]
+	Tuesday= [c.Tuesday/]
+	Wednesday= [c.Wednesday/]
+	Thursday= [c.Thursday/]
+	Friday= [c.Friday/]
+	Saturday= [c.Saturday/]
+	Sunday= [c.Sunday/]
+[/template]
+
+
+
+

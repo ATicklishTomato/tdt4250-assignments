@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/GTFSRaw.model/src" modelPluginID="GTFSRaw.model"
+    modelName="GTFSModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>GTFSModel.ecore</foreignModel>
+  <genPackages prefix="GTFS" disposableProviderFactory="true" ecorePackage="GTFSModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="GTFSModel.ecore#//GTFSRouteType">
+      <genEnumLiterals ecoreEnumLiteral="GTFSModel.ecore#//GTFSRouteType/Tram"/>
+      <genEnumLiterals ecoreEnumLiteral="GTFSModel.ecore#//GTFSRouteType/Subway"/>
+      <genEnumLiterals ecoreEnumLiteral="GTFSModel.ecore#//GTFSRouteType/Rail"/>
+      <genEnumLiterals ecoreEnumLiteral="GTFSModel.ecore#//GTFSRouteType/Bus"/>
+      <genEnumLiterals ecoreEnumLiteral="GTFSModel.ecore#//GTFSRouteType/Ferry"/>
+      <genEnumLiterals ecoreEnumLiteral="GTFSModel.ecore#//GTFSRouteType/CableTram"/>
+      <genEnumLiterals ecoreEnumLiteral="GTFSModel.ecore#//GTFSRouteType/AerialLift"/>
+      <genEnumLiterals ecoreEnumLiteral="GTFSModel.ecore#//GTFSRouteType/Funicular"/>
+      <genEnumLiterals ecoreEnumLiteral="GTFSModel.ecore#//GTFSRouteType/Trolleybus"/>
+      <genEnumLiterals ecoreEnumLiteral="GTFSModel.ecore#//GTFSRouteType/Monorail"/>
+    </genEnums>
+    <genClasses ecoreClass="GTFSModel.ecore#//Collection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Collection/agency"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Collection/routes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Collection/trips"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Collection/stopTimes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Collection/stops"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Collection/calender"/>
+      <genOperations ecoreOperation="GTFSModel.ecore#//Collection/importRaw">
+        <genParameters ecoreParameter="GTFSModel.ecore#//Collection/importRaw/RawCollectionInputObject"/>
+        <genParameters ecoreParameter="GTFSModel.ecore#//Collection/importRaw/ignoreIrregularCalenderElements"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="GTFSModel.ecore#//Agency">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Agency/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Agency/URL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Agency/Timezone"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSModel.ecore#//Route">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Route/RouteID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Route/ShortName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Route/LongName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Route/RouteType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Route/TripsC"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSModel.ecore#//Trip">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Trip/TripID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Trip/ServiceIDNotCalender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Trip/Route"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Trip/Service"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Trip/StopTimesC"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSModel.ecore#//StopTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//StopTime/arrivalTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//StopTime/depatureTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//StopTime/stopSequence"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//StopTime/Stop"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//StopTime/Trip"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSModel.ecore#//Stop">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Stop/StopID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Stop/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Stop/Longitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Stop/Latitude"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSModel.ecore#//Stop/StopTimesC"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSModel.ecore#//Calender">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Calender/ServiceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Calender/StartDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Calender/StopDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Calender/Monday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Calender/Tuesday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Calender/Wednesday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Calender/Thursday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Calender/Friday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Calender/Saturday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSModel.ecore#//Calender/Sunday"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

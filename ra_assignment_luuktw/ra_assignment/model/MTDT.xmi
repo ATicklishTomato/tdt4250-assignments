@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<educationalProgramModel:Program
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:educationalProgramModel="platform:/plugin/tdt4250.ra/model/educationalProgramModel.ra"
+    xsi:schemaLocation="platform:/plugin/tdt4250.ra/model/educationalProgramModel.ra educationalProgramModel.ecore"
+    code="MTDT">
+  <years number="1">
+    <semesters
+        name="Fall">
+      <courses
+          code="EXPH0006"
+          staff="//@staff[email='kjetil.m.skjerve@ntnu.no']"
+          credits="7.5"
+          studyLevel="Examen philosophicum">
+        <name>Examen philosophicum for teknologi og realfag</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Department of Philosophy and Religious Studies</responsibleUnit>
+        <assessments
+            type="Folder Assessment"
+            name="Folder Assessment"
+            weight="0.4"/>
+        <assessments
+            name="Written Exam"
+            weight="0.6"
+            duration="2.0"/>
+      </courses>
+      <courses
+          code="TDT4109"
+          staff="//@staff[email='kjartan.mikalsen@ntnu.no'] //@staff[email='alf.inge.wang@ntnu.no'] //@staff[email='terje.rydland@ntnu.no']"
+          credits="7.5"
+          studyLevel="Grunnleggende emner, nivå I">
+        <name>Informasjonsteknologi, grunnkurs</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+        <assessments
+            name="Written"
+            weight="1.0"
+            duration="4.0"/>
+      </courses>
+      <courses
+          code="TMA4100"
+          staff="//@staff[email='marius.thaule@ntnu.no']"
+          credits="7.5"
+          studyLevel="Basic subjects, level I">
+        <name>Matematikk 1</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Department of Mathematics</responsibleUnit>
+        <assessments
+            type="Folder Assessment"
+            name="Worker"
+            weight="0.2"/>
+        <assessments
+            name="Written Exam"
+            weight="0.8"
+            duration="4.0"/>
+      </courses>
+      <courses
+          code="TMA4140"
+          staff="//@staff[email='sverre.smalo@ntnu.no']"
+          credits="7.5"
+          studyLevel="Grunnleggende emner, nivå I">
+        <name>Diskret Matematikk</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for matematiske fag</responsibleUnit>
+        <assessments
+            name="Semester test"
+            weight="0.2"/>
+        <assessments
+            name="Written Exam"
+            weight="0.8"
+            duration="4.0"/>
+      </courses>
+      <courses
+          code="HMS0002"
+          studyLevel="Foundation courses, level I">
+        <name>HMS-kurs for 1. årsstudenter</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Fakultet for informasjonsteknologi og elektroteknikk</responsibleUnit>
+        <assessments
+            type="Project"
+            name="Education"/>
+      </courses>
+    </semesters>
+    <semesters
+        name="Spring">
+      <courses
+          code="TDT4100"
+          staff="//@staff[email='borgeha@ntnu.no'] //@staff[email='hal@ntnu.no']"
+          credits="7.5"
+          studyLevel="Grunnleggende emner, nivå I">
+        <name>Objektorientert programmering</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+        <assessments
+            name="Skriftlig skoleeksamen"
+            weight="1.0"
+            duration="4.0"/>
+      </courses>
+      <courses
+          code="TFE4101"
+          staff="//@staff[email='pgk@ntnu.no'] //@staff[email='peter.svensson@ntnu.no']"
+          credits="7.5"
+          studyLevel="Grunnleggende emner, nivå I">
+        <name>Krets- og digitalteknikk</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for elektroniske systemer</responsibleUnit>
+        <assessments
+            name="Skriftlig"
+            weight="1.0"
+            duration="4.0"/>
+      </courses>
+      <courses
+          code="TMA4115"
+          staff="//@staff[email='aslak.buan@ntnu.no']"
+          credits="7.5"
+          studyLevel="Grunnleggende emner, nivå I">
+        <name>Matematikk 3</name>
+        <language>Norwegian</language>
+        <language>English</language>
+        <responsibleUnit>Institutt for matematiske fag</responsibleUnit>
+        <assessments
+            name="Skriftlig skoleeksamen"
+            weight="1.0"
+            duration="4.0"/>
+      </courses>
+      <courses
+          code="TDT4180"
+          staff="//@staff[email='yngve.dahl@ntnu.no'] //@staff[email='hal@ntnu.no'] //@staff[email='dag.svanes@ntnu.no']"
+          credits="7.5"
+          studyLevel="Videregående emner, nivå II">
+        <name>Menneskemaskin-interaksjon</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+        <assessments
+            type="Report"
+            name="Rapport"
+            weight="1.0"/>
+      </courses>
+    </semesters>
+  </years>
+  <years number="2">
+    <semesters
+        name="Fall">
+      <courses
+          code="IT1901"
+          staff="//@staff[email='hal@ntnu.no'] //@staff[email='stoica@ntnu.no']"
+          credits="7.5"
+          studyLevel="Videregående emner, nivå II">
+        <name>Informatikk prosjektarbeid I</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+        <assessments
+            type="Folder Assessment"
+            name="Mappevurdering"
+            weight="1.0"/>
+      </courses>
+      <courses
+          code="TDT4120"
+          staff="//@staff[email='mlh@ntnu.no']"
+          credits="7.5"
+          studyLevel="Videregående emner, nivå II">
+        <name>Algoritmer og datastrukturer</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+        <assessments
+            name="Skriftlig skoleeksamen"
+            weight="1.0"
+            duration="4.0"/>
+      </courses>
+      <courses
+          code="TDT4160"
+          staff="//@staff[email='gunnar.tufte@ntnu.no']"
+          credits="7.5"
+          studyLevel="Videregående emner, nivå II">
+        <name>Datamaskiner og digitalteknikk</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+        <assessments
+            name="Skriftlig skoleeksamen"
+            weight="1.0"
+            duration="4.0"/>
+      </courses>
+      <courses
+          code="TMA4240"
+          staff="//@staff[email='haakon.tjelmeland@ntnu.no']"
+          credits="7.5"
+          studyLevel="Grunnleggende emner, nivå I">
+        <name>Statistikk</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for matematiske fag</responsibleUnit>
+        <assessments
+            name="Skriftlig skoleeksamen"
+            weight="1.0"
+            duration="4.0"/>
+      </courses>
+    </semesters>
+    <semesters
+        name="Spring">
+      <courses
+          code="TDT4140"
+          staff="//@staff[email='babak.farshchian@ntnu.no']"
+          credits="7.5"
+          studyLevel="Videregående emner, nivå II">
+        <name>Programvareutvikling</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+        <assessments
+            type="Folder Assessment"
+            name="Mappevurdering"
+            weight="1.0"/>
+      </courses>
+      <courses
+          code="TDT4145"
+          staff="//@staff[email='roger.midtstraum@ntnu.no'] //@staff[email='sveinbra@ntnu.no']"
+          credits="7.5"
+          studyLevel="Videregående emner, nivå II">
+        <name>Datamodellering og databasesystemer</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+        <assessments
+            type="Project"
+            name="Prosjektoppgave"
+            weight="0.4"/>
+        <assessments
+            name="Skriftlig skoleeksamen"
+            weight="0.3"
+            duration="2.0"/>
+        <assessments
+            name="Semesterprøve"
+            weight="0.3"
+            duration="2.0"/>
+      </courses>
+      <courses
+          code="TTM4100"
+          staff="//@staff[email='norvald.stol@ntnu.no']"
+          credits="7.5"
+          studyLevel="Grunnleggende emner, nivå I">
+        <name>Kommunikasjon - Tjenester og nett</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for informasjonssikkerhet og kommunikasjonsteknologi</responsibleUnit>
+        <assessments
+            name="Skriftlig skoleeksamen"
+            weight="1.0"
+            duration="4.0"/>
+      </courses>
+      <courses
+          code="TDT4113"
+          staff="//@staff[email='zhirong.yang@ntnu.no']"
+          credits="7.5"
+          studyLevel="Grunnleggende emner, nivå I">
+        <name>Datateknologi, programmeringsprosjekt</name>
+        <language>Norwegian</language>
+        <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+        <assessments
+            type="Project"
+            name="Arbeider"
+            weight="1.0"/>
+      </courses>
+    </semesters>
+  </years>
+  <years number="3">
+    <variantSemesters
+        name="Fall">
+      <semesterChoices
+          name="Algoritmer og Datamaskiner Fall">
+        <courses
+            code="TDT4136"
+            staff="//@staff[email='pinar@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Introduksjon til kunstig intelligens</name>
+          <name>Introduction to Artificial Intelligence</name>
+          <language>English</language>
+          <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="4.0"/>
+        </courses>
+        <courses
+            code="TDT4258"
+            staff="//@staff[email='rakesh.kumar@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Maskinnær programmering</name>
+          <language>English</language>
+          <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="3.0"/>
+        </courses>
+        <courses
+            code="TMA4135"
+            staff="//@staff[email='markus.grasmair@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Matematikk 4D</name>
+          <language>English</language>
+          <language>Norwegian</language>
+          <responsibleUnit>Institutt for matematiske fag</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="4.0"/>
+        </courses>
+        <variantCourses>
+          <courseChoices
+              code="IT2810"
+              staff="//@staff[email='trond.aalberg@ntnu.no']"
+              credits="7.5"
+              studyLevel="Tredjeårsemner, nivå III">
+            <name>Webutvikling</name>
+            <language>Norwegian</language>
+            <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+            <assessments
+                type="Folder Assessment"
+                name="Mappe/sammensatt vurdering"
+                weight="1.0"/>
+          </courseChoices>
+          <courseChoices
+              code="TDT4117"
+              staff="//@staff[email='dhruv.gupta@ntnu.no']"
+              credits="7.5"
+              studyLevel="Tredjeårsemner, nivå III">
+            <name>Informasjonsgjenfinning</name>
+            <language>Norwegian</language>
+            <language>English</language>
+            <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+            <assessments
+                name="Skriftlig skoleeksamen"
+                weight="1.0"
+                duration="4.0"/>
+          </courseChoices>
+        </variantCourses>
+      </semesterChoices>
+      <semesterChoices
+          name="Databaser og sok Fall">
+        <courses
+            code="TMA4135"
+            staff="//@staff[email='markus.grasmair@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Matematikk 4D</name>
+          <language>English</language>
+          <language>Norwegian</language>
+          <responsibleUnit>Institutt for matematiske fag</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="4.0"/>
+        </courses>
+        <courses
+            code="TDT4136"
+            staff="//@staff[email='pinar@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Introduksjon til kunstig intelligens</name>
+          <name>Introduction to Artificial Intelligence</name>
+          <language>English</language>
+          <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="4.0"/>
+        </courses>
+        <courses
+            code="TDT4117"
+            staff="//@staff[email='dhruv.gupta@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Informasjonsgjenfinning</name>
+          <language>Norwegian</language>
+          <language>English</language>
+          <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="4.0"/>
+        </courses>
+        <variantCourses>
+          <courseChoices
+              code="IT2810"
+              staff="//@staff[email='trond.aalberg@ntnu.no']"
+              credits="7.5"
+              studyLevel="Tredjeårsemner, nivå III">
+            <name>Webutvikling</name>
+            <language>Norwegian</language>
+            <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+            <assessments
+                type="Folder Assessment"
+                name="Mappe/sammensatt vurdering"
+                weight="1.0"/>
+          </courseChoices>
+          <courseChoices
+              code="TDT4137"
+              staff="//@staff[email='rudolf.mester@ntnu.no']"
+              credits="7.5"
+              studyLevel="Tredjeårsemner, nivå III">
+            <name>Kognitive arkitekturer</name>
+            <language>English</language>
+            <language>Norwegian</language>
+            <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+            <assessments
+                name="Skriftlig skoleeksamen"
+                weight="1.0"
+                duration="4.0"/>
+          </courseChoices>
+        </variantCourses>
+      </semesterChoices>
+      <semesterChoices
+          name="Kunstig Intelligens Fall">
+        <courses
+            code="TMA4135"
+            staff="//@staff[email='markus.grasmair@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Matematikk 4D</name>
+          <language>English</language>
+          <language>Norwegian</language>
+          <responsibleUnit>Institutt for matematiske fag</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="4.0"/>
+        </courses>
+        <courses
+            code="TDT4136"
+            staff="//@staff[email='pinar@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Introduksjon til kunstig intelligens</name>
+          <name>Introduction to Artificial Intelligence</name>
+          <language>English</language>
+          <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="4.0"/>
+        </courses>
+        <courses
+            code="TDT4137"
+            staff="//@staff[email='rudolf.mester@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Kognitive arkitekturer</name>
+          <language>English</language>
+          <language>Norwegian</language>
+          <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="4.0"/>
+        </courses>
+        <variantCourses>
+          <courseChoices
+              code="IT2810"
+              staff="//@staff[email='trond.aalberg@ntnu.no']"
+              credits="7.5"
+              studyLevel="Tredjeårsemner, nivå III">
+            <name>Webutvikling</name>
+            <language>Norwegian</language>
+            <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+            <assessments
+                type="Folder Assessment"
+                name="Mappe/sammensatt vurdering"
+                weight="1.0"/>
+          </courseChoices>
+          <courseChoices
+              code="TDT4117"
+              staff="//@staff[email='dhruv.gupta@ntnu.no']"
+              credits="7.5"
+              studyLevel="Tredjeårsemner, nivå III">
+            <name>Informasjonsgjenfinning</name>
+            <language>Norwegian</language>
+            <language>English</language>
+            <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+            <assessments
+                name="Skriftlig skoleeksamen"
+                weight="1.0"
+                duration="4.0"/>
+          </courseChoices>
+        </variantCourses>
+      </semesterChoices>
+      <semesterChoices
+          name="Programvaresystemer Fall">
+        <courses
+            code="TMA4135"
+            staff="//@staff[email='markus.grasmair@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Matematikk 4D</name>
+          <language>English</language>
+          <language>Norwegian</language>
+          <responsibleUnit>Institutt for matematiske fag</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="4.0"/>
+        </courses>
+        <courses
+            code="TDT4136"
+            staff="//@staff[email='pinar@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Introduksjon til kunstig intelligens</name>
+          <name>Introduction to Artificial Intelligence</name>
+          <language>English</language>
+          <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="1.0"
+              duration="4.0"/>
+        </courses>
+        <courses
+            code="TDT4175"
+            staff="//@staff[email='john.krogstie@ntnu.no'] //@staff[email='pieter@ntnu.no']"
+            credits="7.5"
+            studyLevel="Tredjeårsemner, nivå III">
+          <name>Informasjonssystemer</name>
+          <language>English</language>
+          <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+          <assessments
+              name="Skriftlig skoleeksamen"
+              weight="0.8"
+              duration="4.0"/>
+          <assessments
+              type="Folder Assessment"
+              name="Mappe/sammensatt vurdering"
+              weight="0.2"/>
+        </courses>
+        <variantCourses>
+          <courseChoices
+              code="IT2810"
+              staff="//@staff[email='trond.aalberg@ntnu.no']"
+              credits="7.5"
+              studyLevel="Tredjeårsemner, nivå III">
+            <name>Webutvikling</name>
+            <language>Norwegian</language>
+            <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+            <assessments
+                type="Folder Assessment"
+                name="Mappe/sammensatt vurdering"
+                weight="1.0"/>
+          </courseChoices>
+          <courseChoices
+              code="TDT4117"
+              staff="//@staff[email='dhruv.gupta@ntnu.no']"
+              credits="7.5"
+              studyLevel="Tredjeårsemner, nivå III">
+            <name>Informasjonsgjenfinning</name>
+            <language>Norwegian</language>
+            <language>English</language>
+            <responsibleUnit>Institutt for datateknologi og informatikk</responsibleUnit>
+            <assessments
+                name="Skriftlig skoleeksamen"
+                weight="1.0"
+                duration="4.0"/>
+          </courseChoices>
+        </variantCourses>
+      </semesterChoices>
+    </variantSemesters>
+  </years>
+  <name>Datateknologi - masterprogram (sivilingeniør) 5-årig</name>
+  <name>Computer Science 5 year masters program</name>
+  <staff email="kjartan.mikalsen@ntnu.no"
+      assignedCourses="//@years.0/@semesters.0/@courses.1">
+    <firstName>Kjartan</firstName>
+    <firstName>Koch</firstName>
+    <lastName>Mikalsen</lastName>
+  </staff>
+  <staff email="alf.inge.wang@ntnu.no"
+      assignedCourses="//@years.0/@semesters.0/@courses.1">
+    <firstName>Alf</firstName>
+    <firstName>Inge</firstName>
+    <lastName>Wang</lastName>
+  </staff>
+  <staff email="terje.rydland@ntnu.no"
+      assignedCourses="//@years.0/@semesters.0/@courses.1">
+    <firstName>Terje</firstName>
+    <lastName>Rydland</lastName>
+  </staff>
+  <staff email="yngve.dahl@ntnu.no"
+      assignedCourses="//@years.0/@semesters.1/@courses.3">
+    <firstName>Yngve</firstName>
+    <lastName>Dahl</lastName>
+  </staff>
+  <staff email="marius.thaule@ntnu.no"
+      assignedCourses="//@years.0/@semesters.0/@courses.2">
+    <firstName>Marius</firstName>
+    <lastName>Thaule</lastName>
+  </staff>
+  <staff email="sverre.smalo@ntnu.no"
+      assignedCourses="//@years.0/@semesters.0/@courses.3">
+    <firstName>Sverre</firstName>
+    <firstName>Olaf</firstName>
+    <lastName>Smalø</lastName>
+  </staff>
+  <staff email="borgeha@ntnu.no"
+      assignedCourses="//@years.0/@semesters.1/@courses.0">
+    <firstName>Børge</firstName>
+    <lastName>Haugset</lastName>
+  </staff>
+  <staff email="hal@ntnu.no"
+      assignedCourses="//@years.0/@semesters.1/@courses.0 //@years.0/@semesters.1/@courses.3 //@years.1/@semesters.0/@courses.0">
+    <firstName>Hallvard</firstName>
+    <lastName>Trætteberg</lastName>
+  </staff>
+  <staff email="dag.svanes@ntnu.no"
+      assignedCourses="//@years.0/@semesters.1/@courses.3">
+    <firstName>Dag</firstName>
+    <lastName>Svanæs</lastName>
+  </staff>
+  <staff email="pgk@ntnu.no"
+      assignedCourses="//@years.0/@semesters.1/@courses.1">
+    <firstName>Per</firstName>
+    <firstName>Gunnar</firstName>
+    <lastName>Kjeldsberg</lastName>
+  </staff>
+  <staff email="peter.svensson@ntnu.no"
+      assignedCourses="//@years.0/@semesters.1/@courses.1">
+    <firstName>Peter</firstName>
+    <lastName>Svensson</lastName>
+  </staff>
+  <staff email="aslak.buan@ntnu.no"
+      assignedCourses="//@years.0/@semesters.1/@courses.2">
+    <firstName>Aslak</firstName>
+    <firstName>Bakke</firstName>
+    <lastName>Buan</lastName>
+  </staff>
+  <staff email="stoica@ntnu.no"
+      assignedCourses="//@years.1/@semesters.0/@courses.0">
+    <firstName>George</firstName>
+    <firstName>Adrian</firstName>
+    <lastName>Stoica</lastName>
+  </staff>
+  <staff email="mlh@ntnu.no"
+      assignedCourses="//@years.1/@semesters.0/@courses.1">
+    <firstName>Magnus</firstName>
+    <firstName>Lie</firstName>
+    <lastName>Hetland</lastName>
+  </staff>
+  <staff email="gunnar.tufte@ntnu.no"
+      assignedCourses="//@years.1/@semesters.0/@courses.2">
+    <firstName>Gunnar</firstName>
+    <lastName>Tufte</lastName>
+  </staff>
+  <staff email="lykkebo@idi.ntnu.no">
+    <firstName>Odd</firstName>
+    <firstName>Rune</firstName>
+    <lastName>Strømmen</lastName>
+    <lastName>Lykkebø</lastName>
+  </staff>
+  <staff email="haakon.tjelmeland@ntnu.no"
+      assignedCourses="//@years.1/@semesters.0/@courses.3">
+    <firstName>Haakon</firstName>
+    <lastName>Tjelmeland</lastName>
+  </staff>
+  <staff email="babak.farshchian@ntnu.no"
+      assignedCourses="//@years.1/@semesters.1/@courses.0">
+    <firstName>Babak</firstName>
+    <lastName>Farshchian</lastName>
+  </staff>
+  <staff email="roger.midtstraum@ntnu.no"
+      assignedCourses="//@years.1/@semesters.1/@courses.1">
+    <firstName>Roger</firstName>
+    <lastName>Midtstraum</lastName>
+  </staff>
+  <staff email="sveinbra@ntnu.no"
+      assignedCourses="//@years.1/@semesters.1/@courses.1">
+    <firstName>Svein</firstName>
+    <firstName>Erik</firstName>
+    <lastName>Bratsberg</lastName>
+  </staff>
+  <staff email="norvald.stol@ntnu.no"
+      assignedCourses="//@years.1/@semesters.1/@courses.2">
+    <firstName>Norvald</firstName>
+    <lastName>Stol</lastName>
+  </staff>
+  <staff email="pinar@ntnu.no"
+      assignedCourses="//@years.2/@variantSemesters.0/@semesterChoices.0/@courses.0 //@years.2/@variantSemesters.0/@semesterChoices.1/@courses.1 //@years.2/@variantSemesters.0/@semesterChoices.2/@courses.1 //@years.2/@variantSemesters.0/@semesterChoices.3/@courses.1">
+    <firstName>Pinar</firstName>
+    <lastName>Øzturk</lastName>
+  </staff>
+  <staff email="bjorn.gottschall@ntnu.no">
+    <firstName>Björn</firstName>
+    <lastName>Gottschall</lastName>
+  </staff>
+  <staff email="rakesh.kumar@ntnu.no"
+      assignedCourses="//@years.2/@variantSemesters.0/@semesterChoices.0/@courses.1">
+    <firstName>Rakesh</firstName>
+    <lastName>Kumar</lastName>
+  </staff>
+  <staff email="markus.grasmair@ntnu.no"
+      assignedCourses="//@years.2/@variantSemesters.0/@semesterChoices.0/@courses.2 //@years.2/@variantSemesters.0/@semesterChoices.1/@courses.0 //@years.2/@variantSemesters.0/@semesterChoices.2/@courses.0 //@years.2/@variantSemesters.0/@semesterChoices.3/@courses.0">
+    <firstName>Markus</firstName>
+    <lastName>Grasmair</lastName>
+  </staff>
+  <staff email="trond.aalberg@ntnu.no"
+      assignedCourses="//@years.2/@variantSemesters.0/@semesterChoices.0/@variantCourses.0/@courseChoices.0 //@years.2/@variantSemesters.0/@semesterChoices.1/@variantCourses.0/@courseChoices.0 //@years.2/@variantSemesters.0/@semesterChoices.2/@variantCourses.0/@courseChoices.0 //@years.2/@variantSemesters.0/@semesterChoices.3/@variantCourses.0/@courseChoices.0">
+    <firstName>Trond</firstName>
+    <lastName>Aalberg</lastName>
+  </staff>
+  <staff email="dhruv.gupta@ntnu.no"
+      assignedCourses="//@years.2/@variantSemesters.0/@semesterChoices.0/@variantCourses.0/@courseChoices.1 //@years.2/@variantSemesters.0/@semesterChoices.1/@courses.2 //@years.2/@variantSemesters.0/@semesterChoices.2/@variantCourses.0/@courseChoices.1 //@years.2/@variantSemesters.0/@semesterChoices.3/@variantCourses.0/@courseChoices.1">
+    <firstName>Dhruv</firstName>
+    <lastName>Gupta</lastName>
+  </staff>
+  <staff email="rudolf.mester@ntnu.no"
+      assignedCourses="//@years.2/@variantSemesters.0/@semesterChoices.1/@variantCourses.0/@courseChoices.1 //@years.2/@variantSemesters.0/@semesterChoices.2/@courses.2">
+    <firstName>Rudolf</firstName>
+    <lastName>Mester</lastName>
+  </staff>
+  <staff email="john.krogstie@ntnu.no"
+      assignedCourses="//@years.2/@variantSemesters.0/@semesterChoices.3/@courses.2">
+    <firstName>John</firstName>
+    <lastName>Krogstie</lastName>
+  </staff>
+  <staff email="pieter@ntnu.no"
+      assignedCourses="//@years.2/@variantSemesters.0/@semesterChoices.3/@courses.2">
+    <firstName>Pieter</firstName>
+    <firstName>Jelle</firstName>
+    <lastName>Toussaint</lastName>
+  </staff>
+  <staff email="kjetil.m.skjerve@ntnu.no"
+      assignedCourses="//@years.0/@semesters.0/@courses.0">
+    <firstName>Kjetil</firstName>
+    <firstName>Mangset</firstName>
+    <lastName>Skjerve</lastName>
+  </staff>
+  <staff email="zhirong.yang@ntnu.no"
+      assignedCourses="//@years.1/@semesters.1/@courses.3">
+    <firstName>Zhirong</firstName>
+    <lastName>Yang</lastName>
+  </staff>
+</educationalProgramModel:Program>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ra_assignment/src" modelPluginID="ra_assignment"
+    modelName="EducationalProgramModelFix" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>educationalProgramModelFix.ecore</foreignModel>
+  <genPackages prefix="EducationalProgramModelFix" disposableProviderFactory="true"
+      ecorePackage="educationalProgramModelFix.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="educationalProgramModelFix.ecore#//assessmentTypes">
+      <genEnumLiterals ecoreEnumLiteral="educationalProgramModelFix.ecore#//assessmentTypes/writtenExam"/>
+      <genEnumLiterals ecoreEnumLiteral="educationalProgramModelFix.ecore#//assessmentTypes/folderAssessment"/>
+      <genEnumLiterals ecoreEnumLiteral="educationalProgramModelFix.ecore#//assessmentTypes/assignment"/>
+      <genEnumLiterals ecoreEnumLiteral="educationalProgramModelFix.ecore#//assessmentTypes/project"/>
+      <genEnumLiterals ecoreEnumLiteral="educationalProgramModelFix.ecore#//assessmentTypes/homeExam"/>
+      <genEnumLiterals ecoreEnumLiteral="educationalProgramModelFix.ecore#//assessmentTypes/report"/>
+    </genEnums>
+    <genClasses ecoreClass="educationalProgramModelFix.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//Program/years"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Program/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Program/code"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//Program/staff"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//Program/courses"/>
+    </genClasses>
+    <genClasses ecoreClass="educationalProgramModelFix.ecore#//Year">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//Year/semesters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Year/number"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//Year/variantSemesters"/>
+    </genClasses>
+    <genClasses ecoreClass="educationalProgramModelFix.ecore#//Semester">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//Semester/courses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Semester/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//Semester/variantCourses"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Semester/credits"/>
+    </genClasses>
+    <genClasses ecoreClass="educationalProgramModelFix.ecore#//Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Course/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Course/code"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//Course/staff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Course/credits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Course/studyLevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Course/language"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Course/responsibleUnit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//Course/assessments"/>
+    </genClasses>
+    <genClasses ecoreClass="educationalProgramModelFix.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Person/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Person/lastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Person/email"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//Person/assignedCourses"/>
+    </genClasses>
+    <genClasses ecoreClass="educationalProgramModelFix.ecore#//Assessment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Assessment/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Assessment/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Assessment/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Assessment/weight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//Assessment/duration"/>
+    </genClasses>
+    <genClasses ecoreClass="educationalProgramModelFix.ecore#//VariantSemester">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//VariantSemester/semesterChoices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute educationalProgramModelFix.ecore#//VariantSemester/name"/>
+    </genClasses>
+    <genClasses ecoreClass="educationalProgramModelFix.ecore#//VariantCourse">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference educationalProgramModelFix.ecore#//VariantCourse/courseChoices"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

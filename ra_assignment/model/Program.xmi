@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<educationalProgramModel:Program
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:educationalProgramModel="platform:/plugin/tdt4250.ra/model/educationalProgramModel.ra"
+    xsi:schemaLocation="platform:/plugin/tdt4250.ra/model/educationalProgramModel.ra educationalProgramModel.ecore"
+    code="e">
+  <years>
+    <semesters
+        name="e">
+      <courses
+          code="1"
+          staff="//@staff.0">
+        <language>n</language>
+        <responsibleUnit>e</responsibleUnit>
+        <assessments
+            name="e"/>
+      </courses>
+      <courses
+          code="1">
+        <language>n</language>
+        <responsibleUnit>e</responsibleUnit>
+        <assessments
+            name="e"/>
+      </courses>
+    </semesters>
+  </years>
+  <name>e</name>
+  <staff email="e"
+      assignedCourses="//@years.0/@semesters.0/@courses.0">
+    <firstName>e</firstName>
+    <lastName>e</lastName>
+  </staff>
+  <staff email="e">
+    <firstName>e</firstName>
+    <lastName>e</lastName>
+  </staff>
+</educationalProgramModel:Program>

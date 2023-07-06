@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GTFSUI
+Bundle-SymbolicName: GTFSUI; singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Require-Bundle: org.eclipse.emf.ecore,
+ com.google.gson;bundle-version="2.8.9",
+ GTFSRaw.model;bundle-version="0.1.0"
+Export-Package: .,
+ gtfsJSONCreator

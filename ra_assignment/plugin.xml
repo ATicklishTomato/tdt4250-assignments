@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated educationalProgramModel -->
+      <package
+            uri="platform:/plugin/tdt4250.ra/model/educationalProgramModel.ra"
+            class="educationalProgramModel.EducationalProgramModelPackage"
+            genModel="model/educationalProgramModel.genmodel"/>
+   </extension>
+
+</plugin>

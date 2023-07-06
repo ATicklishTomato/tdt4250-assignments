@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/GTFSRaw.model/src" modelPluginID="GTFSRaw.model"
+    modelName="GTFSRawModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>GTFSRawModel.ecore</foreignModel>
+  <genPackages prefix="GTFSRawPackages" disposableProviderFactory="true" ecorePackage="GTFSRawModel.ecore#/">
+    <genClasses ecoreClass="GTFSRawModel.ecore#//CollectionRaw">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//CollectionRaw/agency"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//CollectionRaw/routes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//CollectionRaw/trips"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//CollectionRaw/stopTimes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//CollectionRaw/stops"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//CollectionRaw/calender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//CollectionRaw/optionalTable"/>
+      <genOperations ecoreOperation="GTFSRawModel.ecore#//CollectionRaw/readGTFSFiles">
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readGTFSFiles/pathToFolder"/>
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readGTFSFiles/csvCommaChar"/>
+      </genOperations>
+      <genOperations ecoreOperation="GTFSRawModel.ecore#//CollectionRaw/readAgencyFile">
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readAgencyFile/absolutePathToFile"/>
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readAgencyFile/csvCommaChar"/>
+      </genOperations>
+      <genOperations ecoreOperation="GTFSRawModel.ecore#//CollectionRaw/readRoutesFile">
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readRoutesFile/absolutePathToFile"/>
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readRoutesFile/csvCommaChar"/>
+      </genOperations>
+      <genOperations ecoreOperation="GTFSRawModel.ecore#//CollectionRaw/readTripsFile">
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readTripsFile/absolutePathToFile"/>
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readTripsFile/csvCommaChar"/>
+      </genOperations>
+      <genOperations ecoreOperation="GTFSRawModel.ecore#//CollectionRaw/readStopTimesFile">
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readStopTimesFile/absolutePathToFile"/>
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readStopTimesFile/csvCommaChar"/>
+      </genOperations>
+      <genOperations ecoreOperation="GTFSRawModel.ecore#//CollectionRaw/readStopsFile">
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readStopsFile/absolutePathToFile"/>
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readStopsFile/csvCommaChar"/>
+      </genOperations>
+      <genOperations ecoreOperation="GTFSRawModel.ecore#//CollectionRaw/readCalendarFile">
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readCalendarFile/absolutePathToFile"/>
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readCalendarFile/csvCommaChar"/>
+      </genOperations>
+      <genOperations ecoreOperation="GTFSRawModel.ecore#//CollectionRaw/readOptionalFile">
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readOptionalFile/absolutePathToFile"/>
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/readOptionalFile/csvCommaChar"/>
+      </genOperations>
+      <genOperations ecoreOperation="GTFSRawModel.ecore#//CollectionRaw/fixSubstrings">
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/fixSubstrings/inputString"/>
+        <genParameters ecoreParameter="GTFSRawModel.ecore#//CollectionRaw/fixSubstrings/csvCommaChar"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="GTFSRawModel.ecore#//AgencyRaw">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//AgencyRaw/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//AgencyRaw/URL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//AgencyRaw/Timezone"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//AgencyRaw/Columns"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSRawModel.ecore#//RouteRaw">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//RouteRaw/RouteID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//RouteRaw/ShortName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//RouteRaw/LongName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//RouteRaw/RouteType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//RouteRaw/Columns"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSRawModel.ecore#//TripRaw">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//TripRaw/TripID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//TripRaw/RouteID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//TripRaw/ServiceID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//TripRaw/Columns"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSRawModel.ecore#//StopTimeRaw">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//StopTimeRaw/StopID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//StopTimeRaw/TripID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//StopTimeRaw/arrivalTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//StopTimeRaw/depatureTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//StopTimeRaw/stopSequence"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//StopTimeRaw/Columns"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSRawModel.ecore#//StopRaw">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//StopRaw/StopID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//StopRaw/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//StopRaw/Longitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//StopRaw/Latitude"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//StopRaw/Columns"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSRawModel.ecore#//CalenderRaw">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//CalenderRaw/ServiceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//CalenderRaw/StartDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//CalenderRaw/StopDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//CalenderRaw/Monday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//CalenderRaw/Tuesday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//CalenderRaw/Wednesday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//CalenderRaw/Thursday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//CalenderRaw/Friday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//CalenderRaw/Saturday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//CalenderRaw/Sunday"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//CalenderRaw/Columns"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSRawModel.ecore#//OptionalTableRaw">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GTFSRawModel.ecore#//OptionalTableRaw/Columns"/>
+    </genClasses>
+    <genClasses ecoreClass="GTFSRawModel.ecore#//OptionalColumnRaw">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//OptionalColumnRaw/ColumnName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GTFSRawModel.ecore#//OptionalColumnRaw/ColumnValue"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
